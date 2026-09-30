@@ -151,16 +151,22 @@ git clean -f
 Marca un punto concreto del historial, normalmente una version.
 
 ```bash
-git tag v1.0
+git tag v1.0``
 git tag
 git push origin v1.0
 ```
 
-## 7. Resumen de conceptos
+## 7. Ramas
 
-- Git registra el trabajo en tres estados: directorio de trabajo, area de preparacion (`add`) e historial (`commit`).
-- La identidad (`config`) y el remoto (`remote add`) se configuran al inicio; el ciclo diario es `add`, `commit` y `push`.
-- `log` y `diff` sirven para consultar; no modifican nada.
-- Para moverse entre ramas se recomienda `switch`; `checkout` se conserva por compatibilidad.
-- Para deshacer: `restore` corrige archivos, `reset` mueve la rama (peligroso si ya se compartio), `revert` deshace con un commit nuevo (seguro en equipo) y `clean` borra archivos sin seguimiento.
-- `tag` marca versiones y `push -u` vincula la rama local con la remota.
+Crear ramas es algo necesario para tener una buena gestion de aplicacion y equipo.
+
+```bash
+git branch "<Nombre_Rama>"
+
+```
+
+- Cambiar rama:
+
+```bash
+git checkout "<Nombre_Rama>"
+```
